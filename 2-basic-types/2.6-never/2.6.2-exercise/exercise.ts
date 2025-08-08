@@ -3,7 +3,7 @@
 // --------------------------------------------------------------------------
 
 // 1. 이 함수가 `never`를 반환하도록 타입을 지정하세요.
-function error(message: string) {
+function error(message: string): never {
   throw new Error(message)
 }
 
@@ -21,7 +21,7 @@ interface Guest {
 
 type User = Admin | Guest
 
-function describeUser(user: User): string {
+function describeUser(user: User): string | never {
   switch (user.kind) {
     case 'admin':
       return `특권이 있는 관리자 ${user.privileges.join(', ')}.`
