@@ -5,3 +5,14 @@
 // 문제
 // `Car`라는 클래스를 만들고, `year` 필드는 2025로 `make` 필드는 `'KIA'`로 초기화하세요.
 // 그리고 "Year: 2025, Make: KIA" 형식의 문자열을 반환하는 `getInfo` 메서드를 구현하세요.
+class Car {
+  year = 2025
+  make = 'KIA'
+
+  getInfo() {
+    return `Year: ${this.year}, Make: ${this.make}`
+  }
+}
+
+const car = new Car()
+console.log(car.getInfo()) // 'Year: 2025, Make: KIA'
