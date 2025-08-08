@@ -21,5 +21,14 @@ function logPersonName(person: Person): void {
   return console.log(person.name)
 }
 
+const employee: Employee = {
+  name: '지은',
+  age: 31, 
+  employeeId: 121312
+}
+logPersonName(employee)
+
 // 질문 2
 // Employee에서 age 속성을 주석 처리하면 어떻게 될까요?
+
+// Property 'age' is missing in type '{ name: string; employeeId: number; }' but required in type 'Employee'.
