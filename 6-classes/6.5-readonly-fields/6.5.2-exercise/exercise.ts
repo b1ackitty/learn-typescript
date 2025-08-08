@@ -6,7 +6,7 @@
 // title 필드를 읽기 전용(readonly)으로 만드세요.
 
 class Book {
-  title: string
+  readonly title: string
 
   constructor(title: string) {
     this.title = title
@@ -17,3 +17,5 @@ class Book {
 // 연습 2
 // `Book` 클래스의 인스턴스를 생성한 후, `title` 필드를 수정해보세요.
 // 어떤 오류가 발생하나요?
+const book = new Book('가공범')
+book.title = '나미야 잡화점의 기억' // Cannot assign to 'title' because it is a read-only property.
