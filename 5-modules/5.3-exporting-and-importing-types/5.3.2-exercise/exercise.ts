@@ -19,11 +19,23 @@
 
 
 // 4. 이 파일 상단에서 `Person` 타입과 `Employee` 인터페이스를 import 하세요.
-
+import { Person } from "./person.types";
+import { Employee } from "./person.types";
 
 // 5. `person`이라는 이름의 변수를 `Person` 타입으로 선언하고,  
 //    각 프로퍼티에 필요한 값을 할당하세요.
-
+const person: Person = {
+  name: '나사람',
+  age: 31,
+  email: 'email@mail.com'
+}
 
 // 6. `employee`라는 이름의 변수를 `Employee` 타입으로 선언하고,  
 //    각 프로퍼티에 적절한 값을 할당하세요.
+const employee: Employee = {
+  name: '정직원',
+  age: 25,
+  email: 'employee@mail.com',
+  employeeId: 123123,
+  department: 'FE'
+}
