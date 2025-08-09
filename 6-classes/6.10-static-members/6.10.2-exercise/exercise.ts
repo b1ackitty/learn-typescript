@@ -7,20 +7,42 @@
 // 넓이를 계산하는 static 메서드 `calculateArea`를 사용하도록 변경하세요.
 
 class Circle {
-  pi: number = 3.14
+  static pi: number = 3.14
 
-  radius: number
+  static radius: number
 
   constructor(radius: number) {
-    this.radius = radius
+    Circle.radius = radius
   }
 
-  calculateArea(): number {
+  static calculateArea(): number {
     return this.pi * this.radius * this.radius
   }
 }
+
+Circle.radius = 4
+console.log(Circle.calculateArea()) // 50.24
 
 // 연습 2
 // 생성된 인스턴스의 개수를 추적하는 
 // private static 필드 `count`를 가진 `Counter` 클래스를 만드세요.
 // 현재 count 값을 반환하는 `getCount` 메서드도 포함하세요.
+class Counter {
+  private static count = 0
+
+  constructor() {
+    Counter.count++
+  }
+
+  static getCount() {
+    return Counter.count
+  }
+}
+
+const counter1 = new Counter()
+const counter2 = new Counter()
+const counter3 = new Counter()
+const counter4 = new Counter()
+const counter5 = new Counter()
+
+console.log(Counter.getCount()) // 5
