@@ -3,7 +3,17 @@
 // --------------------------------------------------------------------------
 
 // 1. 추상 메서드 `move`를 가진 추상 클래스 `Vehicle`을 만드세요.
-
+abstract class Vehicle {
+  abstract move(): void
+}
 
 // 2. `Vehicle`을 상속받는 서브클래스 `Car`를 만들고,
 //    `move` 메서드를 "자동차가 달리는 중입니다."을 출력하도록 구현하세요.
+class Car extends Vehicle {
+  move() {
+    console.log("자동차가 달리는 중입니다.")
+  }
+}
+
+const car = new Car
+car.move() // '자동차가 달리는 중입니다.'
