@@ -1,4 +1,4 @@
-import { User } from './example1'
+import { User } from './example-1.js'
 
 const user = new User('123')
 

@@ -12,9 +12,23 @@ class Student {
   private studentId = 1
 }
 
+const student = new Student
+console.log(student.studentId) // Property 'studentId' is private and only accessible within class 'Student'.
+console.log(student['studentId']) // 1
 
 // 질문 2
 // JavaScript private 필드 `teacherId`와 `teacherId`를 반환하는 
 // `getTeacherId` 메서드를 가진 `Teacher` 클래스를 만들어보세요.
 // 클래스를 인스턴스화하고, `getTeacherId` 메서드를 호출하여 `teacherId`를 출력해보세요.
 // 이때 `teacherId`는 private이기 때문에 직접 접근할 수 없습니다.
+class Teacher {
+  #teacherId = 1
+
+  getTeacherId() {
+    return this.#teacherId
+  }
+}
+
+const teacher = new Teacher
+console.log(teacher.getTeacherId()) // 1
+console.log(teacher.#teacherId) // Property '#teacherId' is not accessible outside class 'Teacher' because it has a private identifier.
